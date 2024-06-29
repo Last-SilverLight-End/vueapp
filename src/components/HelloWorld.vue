@@ -1,6 +1,10 @@
 <template>
+  
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <p>
+      <ButtonA>{{ 0 }}</ButtonA>
+    </p>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -35,6 +39,7 @@
 </template>
 
 <script lang="ts">
+import ButtonA from './ButtonA.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -42,13 +47,16 @@ export default defineComponent({
   props: {
     msg: String,
   },
+  components: {
+    ButtonA,
+  },
 });
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style scoped>
 h3 {
-  margin: 40px 0 0;
+  margin: 0 0 0;
 }
 ul {
   list-style-type: none;
@@ -56,7 +64,7 @@ ul {
 }
 li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 0;
 }
 a {
   color: #42b983;
